@@ -1,0 +1,115 @@
+@use '../abstracts' as *;
+
+.searchedVideos {
+    width: 100%;
+    padding: 0 2rem;
+
+    .videoCard {
+        max-width: 1000px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+        color: white;
+        font-size: 15px;
+        letter-spacing: .2px;
+
+        a {
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: 1fr;
+            gap: 2rem;
+
+            .video_preview {
+                max-width: 360px;
+                height: 100%;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .video_duration {
+                    padding: 3px 4px;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    position: absolute;
+                    bottom: 2px;
+                    right: 2px;
+                    font-weight: 600;
+                    @include center;
+                }
+            }
+
+            .video_info_container {
+                width: fit-content;
+                display: flex;
+                flex-direction: column;
+
+                .avatar_container {
+                    width: fit-content;
+                    order: 2;
+
+                    .avatar {
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .video_text_container {
+                    width: 100%;
+                    padding-right: 1rem;
+
+                    h3 {
+                        margin: 0 0 .6rem 0;
+                        line-height: 150%;
+                    }
+
+                    .video_info {
+                        color: $subtext-color;
+                        display: flex;
+                        flex-direction: column;
+
+                        a {
+                            order: 1;
+                            margin: 1rem 0;
+
+                            .channelName {
+                                line-height: 130%;
+
+                                &:hover {
+                                    color: $text-color;
+                                }
+                            }
+
+                            #channel {
+                                background-color: rgba(90, 90, 90, 0.4);
+                            }
+                        }
+
+                        .video_metadata {
+                            display: flex;
+
+                        }
+                    }
+                }
+
+                .dots_container {
+                    margin-top: 1.2rem;
+                    display: none;
+                }
+
+                // tooltip styles
+                #title,
+                #avatar {
+                    background-color: rgba(24, 24, 24, 0.7);
+                    border: 1px solid white;
+                }
+            }
+        }
+    }
+}

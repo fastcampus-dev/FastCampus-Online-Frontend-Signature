@@ -1,0 +1,61 @@
+@use '../../abstracts' as *;
+
+.SearchBar {
+    @include center;
+    flex-basis: 33%;
+  
+    form {
+      width: 100%;
+      height: 100%;
+      padding: 0 .5rem;
+      @include center;
+  
+      input {
+        width: 100%;
+        padding: .6rem 1.5rem;
+        background-color: $bg-color;
+        color: $text-color;
+        font-size: 16px;
+        border: 1px solid #323232;
+        border-top-left-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+        outline: none;
+  
+        &:focus {
+          border-color: rgb(0, 140, 255);
+        }
+      }
+  
+      button {
+        height: 100%;
+        padding: .6rem 2rem;
+        background-color: #323232;
+        color: #656565;
+        border: none;
+        outline: none;
+        border-top-right-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+        @include center;
+        cursor: pointer;
+  
+        &:hover {
+          color: $subtext-color;
+        }
+      }
+    }
+  
+    .voiceIcon {
+      background-color: $bg-color;
+      border-radius: 50%;
+    }
+  }
+  
+  .smallSearch {
+    flex-basis: 100%;
+    justify-content: flex-end;
+  
+    .voiceIcon {
+      background-color: transparent;
+      margin-left: 1rem;
+    }
+  }

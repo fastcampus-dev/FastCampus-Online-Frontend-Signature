@@ -1,0 +1,33 @@
+@use '../../abstracts' as *;
+
+aside {
+    grid-area: aside;
+    height: calc(100vh - 55px);
+    padding: .5rem 0;
+    background-color: $bg-sidebar-color;
+    color: white;
+    font-weight: 400;
+    position: relative;
+
+    a {
+        width: 100%;
+        height: 100%;
+        color: inherit;
+        text-decoration: none;
+
+        .sidebar_icon_container {
+            &:hover {
+                background-color: $bg-color-hover;
+            }
+
+            .sidebar_icon {
+                color: white;
+            }
+
+            .sidebar_text {
+                font-weight: 400;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,21 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-proposal-decorators",
+            {
+                "legacy": true
+            }
+        ],
+        [
+            "@babel/plugin-proposal-class-properties",
+            {
+                "loose": false
+            }
+        ]
+        // MobX 4/5에서와 반대로, "loose"가 false여야 합니다!       ^
+    ]
+}

@@ -1,0 +1,53 @@
+@use '../../abstracts' as *;
+
+.big_sidebar {
+    width: 244px;
+    padding-right: .5rem;
+
+    .big_sidebar_container {
+        width: 240px;
+        height: calc(100vh - 55px);
+        padding-right: .5rem;
+        font-size: 14px;
+        position: fixed;
+        overflow: hidden;
+
+        &:hover {
+            overflow: auto;
+        }
+
+        .tooltip {
+            border: 1px solid white;
+        }
+
+        .sidebar_section {
+            padding: .5rem 0;
+            border-bottom: 1px solid rgba(90, 90, 90, 0.55);
+
+            h3 {
+                padding: 1rem 2.4rem;
+                padding-right: 0;
+                color: $subtext-color;
+            }
+
+            a {
+
+                .sidebar_icon_container {
+                    width: 100%;
+                    padding: 1rem 0;
+                    padding-left: 2.4rem;
+                    display: flex;
+                    align-items: center;
+
+                    .sidebar_icon {
+                        margin-right: 2.4rem;
+                    }
+                }
+            }
+
+            a.active {
+                background-color: $bg-color-hover;
+            }
+        }
+    }
+}

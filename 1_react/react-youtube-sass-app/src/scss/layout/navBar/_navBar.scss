@@ -1,0 +1,82 @@
+@use '../../abstracts' as *;
+
+.Navbar {
+    grid-area: nav;
+    width: 100vw;
+    height: 56px;
+    padding: 0 1.5rem;
+    background-color: $bg-nav-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(90, 90, 90, 0.55);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    .icon-container {
+        padding: .5rem;
+        color: $text-color;
+        background-color: $bg-nav-color;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        @include center;
+    }
+
+    .special_searchbar {
+        width: 100%;
+        padding: 0 .5rem;
+        @include center;
+        z-index: 99999;
+
+        button {
+            padding: .5rem;
+            color: white;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            @include center;
+        }
+
+        form {
+            width: 100%;
+            height: 100%;
+            padding: 0 .5rem;
+            @include center;
+
+            input {
+                width: 100%;
+                padding: .6rem 1.5rem;
+                background-color: $bg-color;
+                color: $text-color;
+                font-size: 16px;
+                border: 1px solid #323232;
+                border-top-left-radius: .25rem;
+                border-bottom-left-radius: .25rem;
+                outline: none;
+
+                &:focus {
+                    border-color: rgb(0, 140, 255);
+                }
+            }
+
+            button {
+                height: 100%;
+                padding: .6rem 2rem;
+                background-color: #323232;
+                color: #656565;
+                border: none;
+                outline: none;
+                border-top-right-radius: .25rem;
+                border-bottom-right-radius: .25rem;
+                @include center;
+                cursor: pointer;
+
+                &:hover {
+                    color: $subtext-color;
+                }
+            }
+        }
+    }
+}

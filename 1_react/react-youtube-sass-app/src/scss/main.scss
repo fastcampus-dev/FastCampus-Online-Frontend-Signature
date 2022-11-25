@@ -1,0 +1,47 @@
+@use 'abstracts' as *;
+@use 'layout';
+@use 'pages';
+
+// @use './abstracts/variables';
+// @use './abstracts/mixins';
+
+// @use './layout/navBar/navBar';
+// @use './layout/navBar/leftNav';
+// @use './layout/navBar/rightNav';
+// @use './layout/navBar/searchBar';
+
+// @use './layout/sideBar/sideBar';
+// @use './layout/sideBar/bigSideBar';
+// @use './layout/sideBar/smallSideBar';
+
+// @use './pages/mainPage';
+// @use './pages/searchedVideosPage';
+// @use './pages/videoPage';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-color;
+    font-family: 'Roboto', sans-serif;
+
+    #root {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 55px auto;
+        grid-template-areas:
+            "nav nav"
+            "aside aside";
+
+        main {
+            width: 100%;
+            grid-area: main;
+        }
+    }
+}

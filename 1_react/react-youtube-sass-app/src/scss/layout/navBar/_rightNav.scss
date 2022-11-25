@@ -1,0 +1,16 @@
+@use '../../abstracts' as *;
+
+.buttons {
+    @include center;
+
+    button,
+    .avatar {
+        margin: 0 1rem;
+    }
+
+    .avatar {
+        width: 25px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
