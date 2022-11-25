@@ -1,0 +1,133 @@
+.slider {
+    position: relative;
+}
+
+.slider__arrow-left {
+    background-clip: content-box;
+    padding: 20px 0;
+    box-sizing: border-box;
+    transform: 400ms all ease-in-out;
+    cursor: pointer;
+    width: 80px;
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.slider__arrow-right {
+    background-clip: content-box;
+    padding: 20px 0;
+    box-sizing: border-box;
+    transform: 400ms all ease-in-out;
+    cursor: pointer;
+    width: 80px;
+    z-index: 1000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.arrow {
+    transition: 400ms all ease-in-out;
+}
+
+.arrow:hover {
+    transition: 400ms all ease-in-out;
+    transform: scale(1.5);
+}
+
+.slider:hover .slider__arrow-left {
+    transition: 400ms all ease-in-out;
+    visibility: visible;
+}
+
+.slider:hover .slider__arrow-right {
+    transition: 400ms all ease-in-out;
+    visibility: visible;
+}
+
+
+.slider__arrow-left:hover {
+    background: rgba(20, 20, 20, 0.5);
+    transition: 400ms all ease-in-out;
+}
+
+.slider__arrow-right:hover {
+    background: rgba(20, 20, 20, 0.5);
+    transition: 400ms all ease-in-out;
+}
+
+.row__posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px 0 20px 20px;
+    scroll-behavior: smooth;
+}
+
+.row__posters::-webkit-scrollbar {
+    display: none;
+}
+
+.row__poster {
+    object-fit: contain;
+    width: 100%;
+    max-height: 144px;
+    margin-right: 10px;
+    transform: transform 450ms;
+    border-radius: 4px;
+}
+
+.row__poster:hover {
+    transform: scale(1.08);
+}
+
+@media screen and (min-width: 1200px) {
+    .row__poster {
+        max-height: 160px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .row__poster {
+        max-height: 280px;
+    }
+}
+
+
+.swiper-pagination {
+    text-align: right !important;
+}
+
+.swiper-pagination-bullet {
+    background: gray !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: white !important;
+}
+
+.swiper-button-prev {
+    color: white !important;
+}
+
+.swiper-button-next {
+    color: white !important;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
+}
