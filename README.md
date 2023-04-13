@@ -1,6 +1,7 @@
-# 프론트엔드 웹 개발의 모든 것 초격차 패키지 Online. Course 2. 강의 자료 링크 모음
+# Course 2. 강의 자료 링크 모음
 
 ➡️Draw.io 사용방법 : https://docs.google.com/document/d/18E6ZKaOGtpTeScISeqdlfuqAUHw5eEx8xwJGCusNm-4/edit?usp=sharing
+
 
 
 ## React 
@@ -44,6 +45,7 @@
 19. TailWindCSS https://drive.google.com/file/d/1ky4-Z4eLN9xUAz-YQYJuQuxZPkU0IjCk/view?usp=sharing
 
 20. Emotion https://drive.google.com/file/d/1yEsVbwOZi48Z9tGZ8B15gsa11mC2D4nz/view?usp=sharing
+
 
 
 
